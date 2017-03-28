@@ -177,7 +177,7 @@ module SmarterCSV
           hash.each do |k,v|
             converter = options[:datetime_converters][k]
             next unless converter
-            hash[k] = converter.convert(v, options[:utc_offset])
+            hash[k] = converter.convert(v, options[:well_timezone])
           end
         end        
 
